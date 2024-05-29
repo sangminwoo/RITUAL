@@ -1,122 +1,48 @@
-<p align="center" width="100%">
-<img src="assets/yagna.png" width="20%" alt="RITUAL">
-</p>
+# Academic Project Page Template
+This is an academic paper project page template.
 
 
-# RITUAL: Random Image Transformations as a Universal Anti-hallucination Lever in LVLMs
-
-<!-- Arxiv Link, Project Link -->
-<div style='display:flex; gap: 0.25rem; '>
-<a href="https://arxiv.org/abs/2405.17821"><img src="https://img.shields.io/badge/arXiv-2405.17821-b31b1b.svg"></a>
-<a href="https://github.io/RITUAL"><img src="https://img.shields.io/badge/Project%20Page-online-brightgreen"></a>
-<a href='LICENSE'><img src='https://img.shields.io/badge/License-MIT-blue.svg'></a>
-</div>
-
-This repository contains the official pytorch implementation of the paper: "RITUAL: Random Image Transformations as a Universal Anti-hallucination Lever in LVLMs".
-
-
-## Updates
-
- * **2024.05.29**: Build project page
- * **2024.05.29**: RITUAL Paper online
- * **2024.05.28**: Code Release
-
-
-## Overview
-
-<p align="center" width="100%">
-<img src="assets/overview.png" width="100%" alt="Overview">
-</p>
-When conditioned on the original image, the probabilities for Blue (correct) and Red (hallucinated) responses are similar, which can lead to the hallucinated response being easily sampled.
-RITUAL leverages an additional probability distribution conditioned on the transformed image, where the likelihood of hallucination is significantly reduced.
-Consequently, the response is sampled from a linear combination of the two probability distributions, ensuring more accurate and reliable outputs.
+Example project pages built using this template are:
+- https://vision.huji.ac.il/spectral_detuning/
+- https://vision.huji.ac.il/podd/
+- https://dreamix-video-editing.github.io
+- https://vision.huji.ac.il/conffusion/
+- https://vision.huji.ac.il/3d_ads/
+- https://vision.huji.ac.il/ssrl_ad/
+- https://vision.huji.ac.il/deepsim/
 
 
 
-## Setup
+## Start using the template
+To start using the template click on `Use this Template`.
 
-```bash
-conda create RITUAL python=3.10
-conda activate RITUAL
-git clone https://github.com/sangminwoo/RITUAL.git
-cd RITUAL
-pip install -r requirements.txt
-```
+The template uses html for controlling the content and css for controlling the style. 
+To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
 
+**IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
 
-## Models
+## Components
+- Teaser video
+- Images Carousel
+- Youtube embedding
+- Video Carousel
+- PDF Poster
+- Bibtex citation
 
-*About model checkpoints preparation*
-* [**LLaVA-1.5**](https://github.com/haotian-liu/LLaVA): Download [LLaVA-1.5 merged 7B](https://huggingface.co/liuhaotian/llava-v1.5-7b)
-* [**InstructBLIP**](https://github.com/salesforce/LAVIS/tree/main/projects/instructblip): Download [InstructBLIP](https://huggingface.co/Salesforce/instructblip-vicuna-7b)
-
-
-
-## Evaluation
-
-* **POPE**: `bash eval_bench/scripts/pope_eval.sh` 
-  - Need to specify "model", "model_path"
-* **CHAIR**: `bash eval_bench/scripts/chair_eval.sh`
-  - Need to specify "model", "model_path", "type"
-* **MME**: `bash experiments/cd_scripts/mme_eval.sh`
-  - Need to specify "model", "model_path"
-
-*About datasets preparation*
-- Please download and extract the MSCOCO 2014 dataset from [this link](https://cocodataset.org/) to your data path for evaluation.
-- For MME evaluation, see [this link](https://github.com/BradyFU/Awesome-Multimodal-Large-Language-Models/tree/Evaluation).
-
-
-## Results
-
-### POPE
-<p align="center" width="100%">
-<img src="assets/pope.png" width="90%" alt="POPE results">
-</p>
-
-### MME
-**MME-Fullset**
-<p align="center" width="100%">
-<img src="assets/mme-fullset.png" width="90%" alt="MME-Fullset results">
-</p>
-
-**MME-Hallucination**
-<p align="center" width="100%">
-<img src="assets/mme-hallucination.png" width="90%" alt="MME-Hallucination results">
-</p>
-
-### CHAIR
-<p align="center" width="100%">
-<img src="assets/chair.png" width="40%" alt="CHAIR results">
-</p>
-
-
-
-## Examples
-
-<p align="center" width="100%">
-<img src="assets/llava_bench.png" width="100%" alt="LLaVA-Bench results">
-</p>
-
-<p align="center" width="100%">
-<img src="assets/llava_bench_appendix.png" width="100%" alt="LLaVA-Bench results">
-</p>
-
-
+## Tips:
+- The `index.html` file contains comments instructing you what to replace, you should follow these comments.
+- The `meta` tags in the `index.html` file are used to provide metadata about your paper 
+(e.g. helping search engine index the website, showing a preview image when sharing the website, etc.)
+- The resolution of images and videos can usually be around 1920-2048, there rarely a need for better resolution that take longer to load. 
+- All the images and videos you use should be compressed to allow for fast loading of the website (and thus better indexing by search engines). For images, you can use [TinyPNG](https://tinypng.com), for videos you can need to find the tradeoff between size and quality.
+- When using large video files (larger than 10MB), it's better to use youtube for hosting the video as serving the video from the website can take time.
+- Using a tracker can help you analyze the traffic and see where users came from. [statcounter](https://statcounter.com) is a free, easy to use tracker that takes under 5 minutes to set up. 
+- This project page can also be made into a github pages website.
+- Replace the favicon to one of your choosing (the default one is of the Hebrew University). 
+- Suggestions, improvements and comments are welcome, simply open an issue or contact me. You can find my contact information at [https://pages.cs.huji.ac.il/eliahu-horwitz/](https://pages.cs.huji.ac.il/eliahu-horwitz/)
 
 ## Acknowledgments
-This codebase borrows from most notably [VCD](https://github.com/DAMO-NLP-SG/VCD), [OPERA](https://github.com/shikiw/OPERA), and [LLaVA](https://github.com/haotian-liu/LLaVA).
-Many thanks to the authors for generously sharing their codes!
+Parts of this project page were adopted from the [Nerfies](https://nerfies.github.io/) page.
 
-
-
-## Citation
-If you find this repository helpful for your project, please consider citing our work :)
-
-```
-@article{{woo2024ritual,
-  title={RITUAL: Random Image Transformations as a Universal Anti-hallucination Lever in LVLMs}, 
-  author={Woo, Sangmin and Jang, Jaehyuk and Kim, Donguk and Choi, Yubin and Kim, Changick},
-  journal={arXiv preprint arXiv:2405.17821},
-  year={2024},
-}
-```
+## Website License
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
