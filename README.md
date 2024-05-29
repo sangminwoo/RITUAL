@@ -8,7 +8,7 @@
 <!-- Arxiv Link, Project Link -->
 <div style='display:flex; gap: 0.25rem; '>
 <a href="https://arxiv.org/abs/2405.17821"><img src="https://img.shields.io/badge/arXiv-2405.17821-b31b1b.svg"></a>
-<a href="https://github.io/RITUAL"><img src="https://img.shields.io/badge/Project%20Page-online-brightgreen"></a>
+<a href="https://sangminwoo.github.io/RITUAL"><img src="https://img.shields.io/badge/Project%20Page-online-brightgreen"></a>
 <a href='LICENSE'><img src='https://img.shields.io/badge/License-MIT-blue.svg'></a>
 </div>
 
