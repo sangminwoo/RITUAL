@@ -46,12 +46,9 @@ pip install -r requirements.txt
 
 ## Models
 
-* [**LLaVA-1.5**](https://github.com/haotian-liu/LLaVA):
-* [**InstructBLIP**](https://github.com/salesforce/LAVIS/tree/main/projects/instructblip)
-
 *About model checkpoints preparation*
-- Download [LLaVA-1.5 merged 7B model](https://huggingface.co/liuhaotian/llava-v1.5-7b)
-- Download [InstructBLIP model](https://huggingface.co/Salesforce/instructblip-vicuna-7b)
+* [**LLaVA-1.5**](https://github.com/haotian-liu/LLaVA): Download [LLaVA-1.5 merged 7B](https://huggingface.co/liuhaotian/llava-v1.5-7b)
+* [**InstructBLIP**](https://github.com/salesforce/LAVIS/tree/main/projects/instructblip): Download [InstructBLIP](https://huggingface.co/Salesforce/instructblip-vicuna-7b)
 
 
 
@@ -73,18 +70,18 @@ pip install -r requirements.txt
 
 ### POPE
 <p align="center" width="100%">
-<img src="assets/pope.png" width="100%" alt="POPE results">
+<img src="assets/pope.png" width="90%" alt="POPE results">
 </p>
 
 ### MME
 **MME-Fullset**
 <p align="center" width="100%">
-<img src="assets/mme-fullset.png" width="80%" alt="MME-Fullset results">
+<img src="assets/mme-fullset.png" width="90%" alt="MME-Fullset results">
 </p>
 
 **MME-Hallucination**
 <p align="center" width="100%">
-<img src="assets/mme-hallucination.png" width="100%" alt="MME-Hallucination results">
+<img src="assets/mme-hallucination.png" width="90%" alt="MME-Hallucination results">
 </p>
 
 ### CHAIR
