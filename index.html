@@ -279,38 +279,56 @@
 
 
 
-<section class="hero is-small is-light">
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-      <h2 class="title is-2">LLaVA-Bench Results</h2>
-        <div class="hero-body">
-          <img src="static/images/llava_bench.png" alt="CHAIR" style="width: 100%;"/>
-          <h2 class="subtitle has-text-centered">
-          Hallucinations are highlighted in red. RITUAL well understands ambiguous images and effectively mitigates hallucinations in textual outputs.
-          </h2>
+
+<!-- Image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Qualitative Results</h2>
+          <div id="results-carousel" class="carousel results-carousel">
+            <div class="item">
+              <img src="static/images/llava_bench.png" alt="LLaVA Bench Results"/>
+              <h2 class="subtitle has-text-centered">
+              <strong>LLaVA-Bench.</strong>
+              Hallucinations are highlighted in red.
+            </div>
+            <div class="item">
+              <img src="static/images/llava_bench_appendix.png" alt="LLaVA Bench Results"/>
+              <h2 class="subtitle has-text-centered">
+              <strong>LLaVA-Bench.</strong>
+              Hallucinations are highlighted in red.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/Appendix_CHAIR.png" alt="CHAIR"/>
+              <h2 class="subtitle has-text-centered">
+              <strong>CHAIR.</strong>
+              Hallucinations are highlighted in red.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/Appendix_POPE.png" alt="POPE"/>
+              <h2 class="subtitle has-text-centered">
+              <strong>POPE.</strong>
+              Hallucinations are highlighted in red.
+              </h2>
+            </div>
+            <div class="item">
+              <img src="static/images/Appendix_MME.png" alt="MME"/>
+              <h2 class="subtitle has-text-centered">
+              <strong>MME.</strong>
+              Hallucinations are highlighted in red.
+              </h2>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
-
-<section class="hero is-small is-light">
-  <div class="container">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <div class="hero-body">
-          <img src="static/images/llava_bench_appendix.png" alt="CHAIR" style="width: 100%;"/>
-          <h2 class="subtitle has-text-centered">
-          RITUAL significantly reduces object hallucinations in caption generation compared to VCD and M3ID. It can also boost performance when combined with these baselines. The number of max new tokens is set to 64.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- End image carousel -->
 
 
 
