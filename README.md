@@ -113,7 +113,7 @@ Many thanks to the authors for generously sharing their codes!
 If you find this repository helpful for your project, please consider citing our work :)
 
 ```
-@article{{woo2024ritual,
+@article{woo2024ritual,
   title={RITUAL: Random Image Transformations as a Universal Anti-hallucination Lever in LVLMs}, 
   author={Woo, Sangmin and Jang, Jaehyuk and Kim, Donguk and Choi, Yubin and Kim, Changick},
   journal={arXiv preprint arXiv:2405.17821},
