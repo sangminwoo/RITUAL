@@ -36,7 +36,7 @@ Consequently, the response is sampled from a linear combination of the two proba
 ## Setup
 
 ```bash
-conda create RITUAL python=3.10
+conda create -n RITUAL python=3.10
 conda activate RITUAL
 git clone https://github.com/sangminwoo/RITUAL.git
 cd RITUAL
