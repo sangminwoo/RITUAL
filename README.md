@@ -3,7 +3,7 @@
 </p>
 
 
-# 🔥 RITUAL: Random Image Transformations as a Universal Anti-hallucination Lever in LVLMs
+# 🔥 RITUAL: Random Image Transformations as a Universal Anti-hallucination Lever in Large Vision Language Models
 
 <!-- Arxiv Link, Project Link -->
 <div style='display:flex; gap: 0.25rem; '>
@@ -12,7 +12,7 @@
 <a href='LICENSE'><img src='https://img.shields.io/badge/License-MIT-blue.svg'></a>
 </div>
 
-This repository contains the official pytorch implementation of the paper: "RITUAL: Random Image Transformations as a Universal Anti-hallucination Lever in LVLMs".
+This repository contains the official pytorch implementation of the paper: "RITUAL: Random Image Transformations as a Universal Anti-hallucination Lever in Large Vision Language Models".
 
 
 ## 🚨 Updates
@@ -24,11 +24,11 @@ This repository contains the official pytorch implementation of the paper: "RITU
 
 
 ## 👀 Overview
-<p align="center" width="80%">
-<img src="assets/overview.png" width="100%" alt="Overview">
+<p align="center" width="100%">
+<img src="assets/overview.png" width="70%" alt="Overview">
 </p>
 
-**TL;DR:** RITUAL is a simple yet effective anti-hallucination approach for LVLMs. Our RITUAL method leverages basic im- age transformations (e.g., vertical and horizontal flips) to enhance LVLM accuracy without external models or training. By integrating transformed and original images, RITUAL significantly reduces hallucinations in both discriminative tasks and descriptive tasks. Using both versions together enables the model to refine predictions, reducing errors and boosting correct responses.
+**TL;DR:** RITUAL is a simple yet effective anti-hallucination approach for LVLMs. Our RITUAL method leverages basic image transformations (e.g., vertical and horizontal flips) to enhance LVLM accuracy without external models or training. By integrating transformed and original images, RITUAL significantly reduces hallucinations in both discriminative tasks and descriptive tasks. Using both versions together enables the model to refine predictions, reducing errors and boosting correct responses.
 
 
 
@@ -44,8 +44,8 @@ Consequently, the response is sampled from a linear combination of the two proba
 
 
 ## RITUAL+
-<p align="center" width="70%">
-<img src="assets/ritual+.png" width="100%" alt="Overview">
+<p align="center" width="100%">
+<img src="assets/ritual+.png" width="65%" alt="Overview">
 </p>
 
 In **RITUAL**, the original image V undergoes random transformations, generating a transformed image. In **RITUAL+**, the model evaluates various potential transformations and selects the most beneficial one to improve answer accuracy within the given context, further refining reliability. These transformed images serve as complementary inputs, enabling the model to incorporate multiple visual perspectives to reduce hallucinations.
