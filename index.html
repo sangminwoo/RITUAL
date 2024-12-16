@@ -141,14 +141,13 @@
     <div class="hero-body">
       <img src="static/images/overview.png" alt="Overview"/>
       <h2 class="subtitle has-text-centered">
-        <strong>Overview.</strong>
-        At each timestep t, LVLM auto-regressively samples a response ηt given a visual input, a textual query, and previously generated tokens. When conditioned on the original image V, the probabilities for Blue (correct) and Red (hallucinated) responses are similar, which can lead to the hallucinated response being easily sampled. RITUAL leverages an additional probability distribution conditioned on the transformed image V^(T), where the likelihood of hallucination is significantly reduced. Consequently, the response is sampled from a linear combination of the two probability distributions, ensuring more accurate and reliable outputs.
+        <strong>TL;DR.</strong>
+        RITUAL is a simple yet effective anti-hallucination approach for LVLMs. Our RITUAL method leverages basic im- age transformations (e.g., vertical and horizontal flips) to enhance LVLM accuracy without external models or training. By integrating transformed and original images, RITUAL significantly reduces hallucinations in both discriminative tasks and descriptive tasks. Using both versions together enables the model to refine predictions, reducing errors and boosting correct responses.
       </h2>
     </div>
   </div>
 </section>
 <!-- End teaser image -->
-
 
 
 <!-- Paper abstract -->
@@ -159,7 +158,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Recent advancements in Large Vision Language Models (LVLMs) have revolutionized how machines understand and generate textual responses based on visual inputs. Despite their impressive capabilities, they often produce "hallucinatory" outputs that do not accurately reflect the visual information, posing challenges in reliability and trustworthiness. Current methods such as contrastive decoding have made strides in addressing these issues by contrasting the original probability distribution of generated tokens with distorted counterparts; yet, generating visually-faithful outputs remains a challenge. In this work, we shift our focus to the opposite: What could serve as a complementary enhancement to the original probability distribution? We propose a simple, training-free method termed <strong>RITUAL</strong> to enhance robustness against hallucinations in LVLMs. Our approach employs random image transformations as complements to the original probability distribution, aiming to mitigate the likelihood of hallucinatory visual explanations by enriching the model’s exposure to varied visual scenarios. Our empirical results show that while the isolated use of transformed images initially degrades performance, strategic implementation of these transformations can indeed serve as effective complements. Notably, our method is compatible with current contrastive decoding methods and does not require external models or costly self-feedback mechanisms, making it a practical addition. In experiments, RITUAL significantly outperforms existing contrastive decoding methods across several object hallucination benchmarks, including POPE, CHAIR, and MME.
+            Recent advancements in Large Vision Language Models (LVLMs) have revolutionized how machines understand and generate textual responses based on visual inputs, yet they often produce "hallucinatory" outputs that misinterpret visual information, posing challenges in reliability and trustworthiness. We propose RITUAL, a simple decoding method that reduces hallucinations by leveraging randomly transformed images as complementary inputs during decoding, adjusting the output probability distribution without additional training or external models. Our key insight is that random transformations expose the model to diverse visual perspectives, enabling it to correct misinterpretations that lead to hallucinations. Specifically, when a model hallucinates based on the original image, the transformed images---altered in aspects such as orientation, scale, or color---provide alternative viewpoints that help recalibrate the model's predictions. By integrating the probability distributions from both the original and transformed images, RITUAL effectively reduces hallucinations. To further improve reliability and address potential instability from arbitrary transformations, we introduce RITUAL+, an extension that selects image transformations based on self-feedback from the LVLM. Instead of applying transformations randomly, RITUAL+ uses the LVLM to evaluate and choose transformations that are most beneficial for reducing hallucinations in a given context. This self-adaptive approach mitigates the potential negative impact of certain transformations on specific tasks, ensuring more consistent performance across different scenarios. Experiments demonstrate that RITUAL and RITUAL+ significantly reduces hallucinations across several object hallucination benchmarks.
           </p>
         </div>
       </div>
@@ -169,8 +168,37 @@
 <!-- End paper abstract -->
 
 
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/method.png" alt="RITUAL"/>
+      <h2 class="subtitle has-text-centered">
+        <strong>RITUAL.</strong>
+        At each timestep t, LVLM auto-regressively samples a response ηt given a visual input, a textual query, and previously generated tokens. When conditioned on the original image V, the probabilities for Blue (correct) and Red (hallucinated) responses are similar, which can lead to the hallucinated response being easily sampled. RITUAL leverages an additional probability distribution conditioned on the transformed image V^(T), where the likelihood of hallucination is significantly reduced. Consequently, the response is sampled from a linear combination of the two probability distributions, ensuring more accurate and reliable outputs.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+ 
 
-<section class="hero is-small">
+<!-- Teaser image-->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/ritual+.png" alt="RITUAL+"/>
+      <h2 class="subtitle has-text-centered">
+        <strong>RITUAL+.</strong>
+        In **RITUAL**, the original image V undergoes random transformations, generating a transformed image. In **RITUAL+**, the model evaluates various potential transformations and selects the most beneficial one to improve answer accuracy within the given context, further refining reliability. These transformed images serve as complementary inputs, enabling the model to incorporate multiple visual perspectives to reduce hallucinations.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End teaser image -->
+
+
+<!-- <section class="hero is-small">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -185,11 +213,11 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
-<section class="hero is-small">
+<!-- <section class="hero is-small">
   <div class="container">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
@@ -203,7 +231,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 
@@ -403,7 +431,7 @@
     <h2 class="title">BibTeX</h2>
     <pre><code>
 @article{woo2024ritual,
-  title={RITUAL: Random Image Transformations as a Universal Anti-hallucination Lever in LVLMs}, 
+  title={RITUAL: Random Image Transformations as a Universal Anti-hallucination Lever in Large Vision Language Models}, 
   author={Woo, Sangmin and Jang, Jaehyuk and Kim, Donguk and Choi, Yubin and Kim, Changick},
   journal={arXiv preprint arXiv:2405.17821},
   year={2024},
